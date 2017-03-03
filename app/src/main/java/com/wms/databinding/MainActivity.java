@@ -1,5 +1,6 @@
 package com.wms.databinding;
 
+import android.content.Intent;
 import android.databinding.BindingAdapter;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -57,6 +58,10 @@ public class MainActivity extends AppCompatActivity {
 
         public void onShow4(final Student student, String msg) {
             Toast.makeText(MainActivity.this, student.getName() + "--" + msg, Toast.LENGTH_LONG).show();
+        }
+
+        public void onRecyclerView() {
+            startActivity(new Intent(MainActivity.this,RecyclerViewActivity.class));
         }
     }
 
